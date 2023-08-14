@@ -273,7 +273,10 @@ body {
     aspect-ratio: 16/9;
     height: 100%;
     width: 100%;
-    margin: auto;
+}
+
+.yt > p {
+    margin-bottom: 1rem;
 }
 
 .portPart {
@@ -318,14 +321,23 @@ body {
     margin-bottom: 1rem;
 }
 
+
+
+.ytVideos {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 5%;
+}
 .portfolioTab {
     display: flex;
-    min-height: 30vh;
-    gap: 4rem;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
 }
-.inversed {
-    flex-direction: row-reverse;
+.portTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tiktoks {
@@ -344,6 +356,14 @@ body {
     .tiktok > .portfolioTab {
         flex-direction: column;
     }
+    .tiktoks {
+        flex-wrap: wrap;
+    }
+    .ytVideos {
+        grid-template-columns: 47% 47%;
+        gap: 6%;
+        grid-template-rows: 47% 47%;
+    }
 }
 @media only screen and (max-width: 850px) {
     .portfolioTab {
@@ -351,11 +371,9 @@ body {
         gap: 3rem;
     }
     .ytVideo {
-        width: 70%;
+        margin: auto;
     }
-    .tiktoks {
-        flex-wrap: wrap;
-    }
+    
     .calendar {
         flex-direction: column;
         height: unset!important;
@@ -378,6 +396,11 @@ body {
     .buttonIntro{
         font-size: var(--fs-200);
     }
+    .ytVideos {
+        grid-template-columns: auto;
+        gap: 5%;
+        grid-template-rows: 30% 30% 30%;
+    }
 }
 @media only screen and (max-width: 500px) {
     h1 {
@@ -391,9 +414,6 @@ body {
     }
     .portfolioTab {
         gap: 1rem;
-    }
-    .ytVideo {
-        width: 100%;
     }
     .headerTab {
         display: none;
@@ -428,7 +448,7 @@ body {
         margin: 4rem 2rem 4rem 2rem;
     }
     
-    h1,h2,.ytTitle {
+    h1,h2,.portTitle {
         font-size: var(--fs-400);
     }
     p {
@@ -459,7 +479,7 @@ body {
     }
 }
 @media only screen and (max-width: 300px) {
-    h1,h2,.ytTitle {
+    h1,h2,.portTitle {
         font-size: var(--fs-300);
     }
     p {
