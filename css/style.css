@@ -1,0 +1,503 @@
+@font-face {
+    font-family: Alaska;
+    src: url("../fonts/alaska.ttf") format("truetype");
+    font-display: swap
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    z-index: inherit;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+:root {
+    --section-spacing: 3.5rem;
+
+    --main: hsl(0, 0%, 12%);
+    --secondary: hsl(0, 0%, 96%);
+    --highlight: hsl(0, 100%, 60%);
+
+    --gray1: hsl(195, 9%, 9%);
+    --gray2: hsl(180, 10%, 12%);
+    --gray3: hsl(180, 7%, 15%);
+    --gray4: hsl(180, 8%, 18%);
+    --gray5: hsl(180, 8%, 23%);
+    --gray6: hsl(180, 7%, 32%);
+    --gray7: hsl(180, 8%, 39%);
+    --gray8: hsl(180, 8%, 49%);
+    --gray9: hsl(180, 12%, 61%);
+    --gray10: hsl(180, 20%, 85%);
+    --gray11: hsl(180, 25%, 92%);
+    --gray12: hsl(0, 0%, 97%);
+    --white: hsl(0, 0%, 96%);
+    --fullywhite: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --darkgrey: hsl(0, 0%, 14%);
+    --whiteop: hsl(0, 0%, 96%,90%);
+    --pink: hsl(340, 100%, 50%);
+    --pinklight: hsl(340, 100%, 60%);
+    --pinkdk: hsl(340, 72%, 35%);
+    --pinkop: hsl(340, 100%, 50%, 20%);
+    --pinktxt:hsl(340, 100%, 75%);
+    /*--pink: hsl(204, 100%, 50%);*/
+    --red: hsl(0, 100%, 50%);
+
+    --fs-100: 0.6rem;
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.563rem;
+    --fs-600: 1.953rem;
+    --fs-700: 2.441rem;
+    --fs-800: 3.052rem;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0
+}
+
+.flex {
+    display: flex;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    font-size: 16px;
+
+    
+    overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    font-size: var(--fs-400);
+    font-family: Alaska, sans-serif;
+    color: var(--secondary);
+    letter-spacing: -.5px;
+    background-color: var(--main);
+}
+
+* {
+    font-variation-settings: "wght"var(--font-weight, 375), "wdth"var(--font-width, 80)
+}
+
+h1,h2{
+    --font-weight:700;
+    --font-width:80;
+    font-weight:400;
+    font-stretch:100%;
+    line-height: 1.1;
+    /* color: var(--gray6); */
+}
+
+h1 {
+    --font-weight: 900;
+    /* color: var(--pink); */
+
+    font-size: var(--fs-800);
+}
+
+h2 {
+    font-size: var(--fs-700);
+    --flow-spacer:1.5em;
+}
+
+h3 {
+    font-size: var(--fs-600);
+}
+
+.left {
+    text-align: left;
+    margin: 1.5rem;
+}
+.right {
+    text-align: right;
+    margin: 1.5rem;
+}
+
+strong {
+    --font-weight: 500;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+a {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+p:not([class]) {
+    max-width: 60ch;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.menuActive::before {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 18vh;
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+}
+
+.activateDropdown {
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.activateDropdown > a {
+    display: unset;
+    padding: 0;
+    align-self: flex-start;
+}
+
+.header > img {
+    height: 60%;
+    cursor: pointer;
+}
+
+.headerTab {
+    max-width: 100%;
+    width: min-content;
+    margin: 0 40px 0 40px;
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+    color: var(--secondary)!important;
+}
+
+footer {
+    margin-top: 10rem;
+}
+
+footer > div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 0 auto 2rem auto;
+}
+
+footer > div > img {
+    height: 10vh;
+    cursor: pointer;
+}
+
+footer > div > span {
+    margin: auto;
+    font-size: .9rem;
+    color: rgb(180, 180, 180);
+}
+
+.footerTab {
+    max-width: 100%;
+    width: min-content;
+    margin: 0 40px 0 40px;
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+    color: var(--secondary)!important;
+}
+
+.linksFooter {
+    display: flex;
+    gap: 1rem;
+}
+
+.linksFooter > a {
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+.menuBtn {
+    height: 60%;
+    display: none;
+    cursor: pointer;
+    padding: 0!important;
+    margin-right: 1.5rem;
+}
+
+.menuDropdown {
+    display: flex;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.welcomeSection {
+    height: 70vh;
+    padding: 4rem;
+    padding-top: calc(4rem + 20vh);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--main)), url("../pics/video-edit-setup.webp");
+    background-position: center;
+    background-size: cover;
+}
+.ytVideo {
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    aspect-ratio: 16/9;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.portPart {
+    margin-bottom: 4rem;
+}
+
+.buttonWrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.portfolioIntro {
+    margin: 4rem;
+}
+
+.buttonIntro {
+    cursor: pointer;
+    width: fit-content;
+}
+
+.buttonIntro::after {
+    opacity: 0;
+    content: "";
+    display: block;
+    background-color: white;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.line {
+    background-color: rgba(255, 255, 255, 0.07);
+    height: 3px;
+    border-radius: 2px;
+    margin: 2rem 0 2rem 0;
+}
+
+.btnActive::after {
+    opacity: 1!important;
+}
+
+.portPart > h2 {
+    margin-bottom: 1rem;
+}
+
+.portfolioTab {
+    display: flex;
+    min-height: 30vh;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+.inversed {
+    flex-direction: row-reverse;
+}
+
+.tiktoks {
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.tiktoks > img {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+    .tiktok > .portfolioTab {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .portfolioTab {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .ytVideo {
+        width: 70%;
+    }
+    .tiktoks {
+        flex-wrap: wrap;
+    }
+    .calendar {
+        flex-direction: column;
+        height: unset!important;
+    }
+    .calendar-container {
+        margin: auto;
+        
+    }
+}
+@media only screen and (max-width: 750px) {
+    .headerTab {
+        font-size: 1.1rem;
+        margin: 0 20px 0 20px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .buttonWrapper {
+        gap: 1rem;
+    }
+    .buttonIntro{
+        font-size: var(--fs-200);
+    }
+}
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: var(--fs-500);
+    }
+    h2 {
+        font-size: var(--fs-400);
+    }
+    p {
+        font-size: var(--fs-300);
+    }
+    .portfolioTab {
+        gap: 1rem;
+    }
+    .ytVideo {
+        width: 100%;
+    }
+    .headerTab {
+        display: none;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    .menuBtn {
+        display: unset;
+    }
+    .header > img {
+        display: unset;
+    }
+    .buttonWrapper {
+        flex-direction: column;
+    }
+    .menuDropdown {
+        position: absolute;
+        top: 10vh;
+        margin: 1rem 0 1rem 2rem;
+    }
+    .calendar {
+        margin: 10rem 2rem 0 2rem!important;
+    }
+    .calendar-container {
+        min-width: 345px!important;
+        width: 345px!important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .portfolioIntro {
+        margin: 4rem 2rem 4rem 2rem;
+    }
+    
+    h1,h2,.ytTitle {
+        font-size: var(--fs-400);
+    }
+    p {
+        font-size: var(--fs-200);
+    }
+    .calendar-container {
+        min-width: 250px!important;
+        width: 250px!important;
+    }
+    .calendar-body ul{
+        padding-inline-start: 10px!important;
+    }
+    .calendar-body li {
+        font-size: .7rem!important;
+    }
+    .calendar-dates li::before {
+        width: 30px!important;
+        height: 30px!important;
+    }
+    .calendar-body .calendar-dates li {
+        margin-top: 20px!important;
+    }
+    .calendar-header p {
+        font-size: 1.1rem!important;
+    }
+    .calendar-body {
+        padding: 10px!important;
+    }
+}
+@media only screen and (max-width: 300px) {
+    h1,h2,.ytTitle {
+        font-size: var(--fs-300);
+    }
+    p {
+        font-size: var(--fs-100);
+    }
+    footer > div > img {
+        height: 7vh;
+    }
+    .linksFooter > a {
+        font-size: 0.8rem;
+    }
+    .calendar-container {
+        min-width: 180px!important;
+        width: 180px!important;
+    }
+    .calendar-body ul{
+        padding-inline-start: 5px!important;
+    }
+    .calendar-body li {
+        font-size: .6rem!important;
+    }
+    .calendar-dates li::before {
+        width: 25px!important;
+        height: 25px!important;
+    }
+    .calendar-body .calendar-dates li {
+        margin-top: 15px!important;
+    }
+    .calendar-header p {
+        font-size: .7rem!important;
+    }
+    .calendar-body {
+        padding: 10px!important;
+    }
+    header .calendar-navigation span {
+        transform: scale(0.6);
+    }
+    .calendar-weekdays > li {
+        font-size: .5rem!important;
+    }
+}

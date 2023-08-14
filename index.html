@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BySaether Media</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="headerTab" src="pics/logo dec 2022.webp" alt="" onclick="loadFront()">
+        <div class="menuDropdown">
+            <a href="index.html" class="headerTab">Home</a>
+            <a href="portfolio.html" class="headerTab">Portfolio</a>
+            <a href="contact.html" class="headerTab">Contact</a>
+        </div>
+        <svg onclick="menuClicked()" class="disable headerTab menuBtn" fill="white" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve"><path id="menuPath" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+    </header>
+    <section class="welcomeSection">
+        <h1 class="welcomeTitle">BySaether Media</h1>
+        <p class="welcomeDesc">Video Editing and Visual & Graphic Design</p>
+        <!-- <img class="welcomePic" src="pics/video-edit-setup.webp" alt=""> -->
+    </section>
+    <section class="portfolioIntro">
+        <div class="buttonWrapper">
+            <div id="button1" class="buttonIntro btnActive" onclick="portfolioOne()">Video Editing</div>
+            <div id="button2" class="buttonIntro" onclick="portfolioTwo()">Overlays & Widgets</div>
+            <div id="button3" class="buttonIntro" onclick="portfolioThree()">Graphics</div>
+        </div>
+        <div class="line"></div>
+        <div id="portfolio1">
+            <div class="yt portPart">
+                <h2>YouTube</h2>
+                <div class="portfolioTab">
+                    <div>
+                        <h3 class="portTitle">A Day In The Life Of A Twitch Streamer</h3>
+                        <p class="portDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime tempore assumenda quidem quasi tempora est praesentium sint rem sit officia.</p>
+                    </div>
+                    <iframe class="ytVideo" src="https://www.youtube.com/embed/tdvjKEDQ2MA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                </div>
+                <div class="portfolioTab inversed">
+                    <div>
+                        <h3 class="portTitle">MY ULTIMATE $10,000 DREAM SETUP OF 2020</h3>
+                        <p class="portDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime tempore assumenda quidem quasi tempora est praesentium sint rem sit officia.</p>
+                    </div>
+                    <iframe class="ytVideo" src="https://www.youtube.com/embed/ruKSFyckpR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="portfolioTab">
+                    <div>
+                        <h3 class="portTitle">My 2022 REWIND as THE #UPNEXTCREATOR of Logitech!</h3>
+                        <p class="portDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime tempore assumenda quidem quasi tempora est praesentium sint rem sit officia.</p>
+                    </div>
+                    <iframe class="ytVideo" src="https://www.youtube.com/embed/kA3-1EJTyn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="tiktok portPart">
+                <h2>TikTok</h2>
+                <div class="portfolioTab">
+                    <div>
+                        <h3 class="portTitle">Subtitles</h3>
+                        <p class="portDesc">Adding subtitles to your short form content
+                            enhances the viewers experience and keeps them engaged in the content.</p>
+                        <a href="">Learn more ...</a>
+                    </div>
+                    <div class="tiktoks">
+                        <img src="pics/tiktok-backdoor.webp" alt="" onclick="backdoor()">
+                        <img src="pics/tiktok-storerob.webp" alt="" onclick="storerob()">
+                        <img src="pics/tiktok-trafstop.webp" alt="" onclick="trafstop()">
+                    </div>
+                </div>
+                <!-- <div class="portfolioTab inversed">
+                    <div>
+                        <h3 class="portTitle">Other</h3>
+                        <p class="portDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur iure ipsum nemo non?</p>
+                    </div>
+
+                </div> -->
+            </div>
+        </div>
+        <div id="portfolio2"></div>
+        <div id="portfolio3"></div>
+    </section>
+    <footer>
+        <div>
+            <img class="footerTab" src="pics/logo dec 2022.webp" alt="" onclick="loadFront()">
+            <div class="footerTab linksFooter">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <span>© 2023 William Sæther&nbsp;</span>
+        </div>
+    </footer>
+</body>
+</html>
