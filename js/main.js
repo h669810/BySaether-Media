@@ -34,7 +34,6 @@ window.addEventListener("resize", function () {
 
 function loadFront() {
     window.location = "../index.html"
-    location.href.replace(/https?:\/\//i, "")
 }
 
 function portfolioOne() {
