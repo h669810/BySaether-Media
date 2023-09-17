@@ -1,7 +1,7 @@
 .calendar {
     display: flex;
     justify-content: space-between;
-    margin: 10rem 4rem 0 4rem;
+    margin: 7rem 4rem 0 4rem;
     height: 509px;
     gap: 2rem;
 }
@@ -13,8 +13,6 @@ ul {
 .calendar-weekdays {
     margin-top: 0;
 }
-
-
 
 .calendar-container {
     background: #2f2f2f;
