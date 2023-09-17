@@ -251,6 +251,10 @@ footer > div > span {
     color: var(--secondary)!important;
 }
 
+footer > div > img {
+    width: auto;
+}
+
 .linksFooter {
     display: flex;
     gap: 1rem;
