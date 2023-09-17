@@ -232,6 +232,7 @@ footer > div {
 footer > div > img {
     height: 10vh;
     cursor: pointer;
+    width: auto!important;
 }
 
 footer > div > span {
@@ -249,10 +250,6 @@ footer > div > span {
     text-align: center;
     align-self: center;
     color: var(--secondary)!important;
-}
-
-footer > div > img {
-    width: auto;
 }
 
 .linksFooter {
