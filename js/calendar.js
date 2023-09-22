@@ -136,7 +136,7 @@ prenexIcons.forEach(icon => {
 	// When an icon is clicked
 	icon.addEventListener("click", () => {
 
-		if (icon.id === "calendar-prev" & disablePrev === true) {}
+		if (icon.id === "calendar-prev" && disablePrev === true) {}
 		else {
 			// Check if the icon is "calendar-prev"
 			// or "calendar-next"
